@@ -21,7 +21,6 @@ body {
 
 strong {
     font-weight: bold;
-    padding: 3px;
 }
 
 header {
@@ -96,15 +95,17 @@ main {
     position: relative;
 }
 
-.rollbtn ion-icon {
+.rollbtn img {
     position: absolute;
     margin: auto;
     top: 0;
     bottom: 0;
     right: 10px;
     color: #FFFFFF;
-    font-size: 35px;
+    height: 35px;
+    width: 35px;
     border-radius: 100%;
+    box-shadow: 0px 0px 5px black;
 }
 
 .stories {
@@ -241,5 +242,66 @@ main {
 /* Side Content */
 .sidecontent {
     background-color: #636363;
+    display: flex;
+    flex-direction: column;
     width: 35%;
+    margin: 0 15px;
+    padding: 5px;
+}
+
+.sidecontent div {
+    padding: 5px;
+}
+
+.s1 {
+    background-color: rgb(255, 89, 89);
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.s2 {
+    background-color: rgb(68, 255, 68);
+    height: 300px;
+}
+
+.s3 {
+    background-color: rgb(87, 213, 255);
+    height: 100px;
+}
+
+.s1-1 {
+    background-color: #636363;
+    height: 56px;
+    width: 56px;
+    border-radius: 100%;
+}
+
+.s1-2 {
+    background-color: #DBDBDB;
+
+    font-size: 14px;
+}
+
+.s2-1 {
+    background-color: rgb(255, 59, 255);
+    height: 10%;
+}
+
+.s2-2 {
+    background-color: orange;
+    height: 90%;
+}
+
+.s1-2 p {
+    color: #636363;
+}
+
+.s2-2-1 {
+    background-color: #636363;
+}
+
+.s2-2-2 {
+    background-color: #DBDBDB;
 }
