@@ -1,8 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+ion-icon {
+    font-size: 22px;
+}
+
 body {
-    background-color: #FAFAFA;
+    background-color: hsl(0, 0%, 98%);
     font-family: 'Roboto', sans-serif;
+}
+
+strong {
+    font-weight: bold;
+    padding: 3px;
 }
 
 header {
@@ -13,35 +32,16 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1;
 }
 
 main {
     margin: 88px auto;
     width: 935px;
-}
-
-.logo {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
-.logo img {
-    padding-top: 9px;
-}
-
-ion-icon {
-    font-size: 22px;
-}
-
-.vbar {
-    background-color: #E5E5E5;
-    height: 25px;
-    width: 1px;
-    margin-right: 8px;
-    margin-left: 8px;
-}
-
+/* Header */
 .header {
     display: flex;
     justify-content: space-between;
@@ -50,8 +50,13 @@ ion-icon {
     margin: auto;
 }
 
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .search {
-    background-color: red;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,62 +69,152 @@ ion-icon {
     color: #979797
 }
 
+.logo img {
+    margin-top: 7px;
+}
+
 .hbtns ion-icon {
     margin: 10px;
 }
 
-.carousel,
-.content {
+.vbar {
+    background-color: #E5E5E5;
+    height: 25px;
+    width: 1px;
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+/* Main Content */
+.maincontent {
+    width: 65%;
+    overflow: hidden;
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+}
+
+.rollbtn ion-icon {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    color: #FFFFFF;
+    font-size: 35px;
+    border-radius: 100%;
+}
+
+.stories {
     background-color: #FFFFFF;
     border: 1px solid #DBDBDB;
-    width: 614px;
-}
 
-.carousel {
-    height: 118px;
     display: flex;
+    height: 118px;
     align-items: center;
     justify-content: flex-start;
+    overflow: hidden;
 }
 
-.carousel img {
+.story {
+    min-width: 80px;
+}
+
+.img1 {
     height: 66px;
     width: 66px;
-    margin: 8px;
-    display: flex;
+    position: relative;
+    margin: auto;
 }
 
-.carousel p {
+.story p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+
     text-align: center;
     font-weight: 400;
     font-size: 12px;
 }
 
+.img2 {
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 2px solid white;
+    border-radius: 100%;
+}
+
+
+/* Content */
 .content {
+    background-color: #FFFFFF;
+    border: 1px solid #DBDBDB;
+
+    display: flex;
+    flex-direction: column;
     height: 749px;
+    max-height: 749px;
     margin-top: 40px;
 }
 
-.content img {
-    width: 100%;
-    height: 84%;
-}
-
-.c1 {
-    justify-content: space-between;
-    height: 8%;
-}
-
 .c1,
-.c1-1 {
+.c2 {
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
+    font-size: 14px;
+}
+
+.c3 {
+    min-width: 100%;
+    max-height: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.c2 p {
+    font-weight: 300;
     display: flex;
     align-items: center;
 }
 
-.c1-1 * {
-    margin-left: 15px;
-    font-size: 14px;
+.c1-1 {
+    display: flex;
+    align-items: center;
+    margin: 5px;
     font-weight: 500;
+}
+
+.c1-2 {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    color: #636363;
+}
+
+.c2-1 {
+    display: flex;
+    margin: 5px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.c2-2 {
+    margin: 5px;
+}
+
+.c1-1 *,
+.c1-2 *,
+.c2-2 * {
+    margin: 5px;
 }
 
 .c1-1 img {
@@ -127,28 +222,24 @@ ion-icon {
     width: 32px;
 }
 
-.c1-2 {
-    margin-right: 15px;
-    color: #636363;
-}
-.c2 {
-    background-color: red;
-}
-
-.img2 {
+.c2-1-1,
+.c2-1-2 {
+    margin: 5px;
     display: flex;
-    position: absolute;
 }
 
-.img2 img {
-    position: absolute;
-    top: -77px;
-    left: 5px;
-    height: 56px;
-    width: 56px;
-
+.c2-1-1 ion-icon {
+    margin-right: 10px;
 }
 
-.carousel {
-    overflow: hidden;
+.c2-1-2 img {
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+/* Side Content */
+.sidecontent {
+    background-color: #636363;
+    width: 35%;
 }
