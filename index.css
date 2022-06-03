@@ -23,6 +23,10 @@ strong {
     font-weight: bold;
 }
 
+p strong {
+    margin: 3px;
+}
+
 header {
     height: 50px;
     background-color: #FFFFFF;
@@ -40,6 +44,10 @@ main {
     display: flex;
 }
 
+footer {
+    display: none;
+}
+
 /* Header */
 .header {
     display: flex;
@@ -47,6 +55,7 @@ main {
     align-items: center;
     width: 935px;
     margin: auto;
+    position: relative;
 }
 
 .logo {
@@ -86,7 +95,7 @@ main {
 
 /* Main Content */
 .maincontent {
-    width: 65%;
+    width: 614px;
     overflow: hidden;
 }
 
@@ -101,11 +110,13 @@ main {
     top: 0;
     bottom: 0;
     right: 10px;
-    color: #FFFFFF;
-    height: 35px;
-    width: 35px;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 30px;
+    width: 30px;
+    box-sizing: content-box;
     border-radius: 100%;
-    box-shadow: 0px 0px 5px black;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 2px 2px 5px rgba(105, 105, 105, 0.5);
 }
 
 .stories {
@@ -117,10 +128,11 @@ main {
     align-items: center;
     justify-content: flex-start;
     overflow: hidden;
+    margin-bottom: 40px;
 }
 
 .story {
-    min-width: 80px;
+    min-width: 77px;
 }
 
 .img1 {
@@ -128,6 +140,10 @@ main {
     width: 66px;
     position: relative;
     margin: auto;
+}
+
+.img1 img {
+    border-radius: 100%;
 }
 
 .story p {
@@ -160,22 +176,29 @@ main {
 
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     height: 749px;
     max-height: 749px;
-    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
-.c1,
+.c1 {
+    display: flex;
+    justify-content: space-between;
+    min-height: 10%;
+    font-size: 14px;
+}
+
 .c2 {
     display: flex;
     justify-content: space-between;
-    height: 10%;
+    min-height: 10%;
     font-size: 14px;
 }
 
 .c3 {
-    min-width: 100%;
-    max-height: 80%;
+    width: 100%;
+    height: 80%;
     display: flex;
     justify-content: center;
 }
@@ -241,10 +264,9 @@ main {
 
 /* Side Content */
 .sidecontent {
-    background-color: #636363;
     display: flex;
     flex-direction: column;
-    width: 35%;
+    width: 293px;
     margin: 0 15px;
     padding: 5px;
 }
@@ -254,54 +276,153 @@ main {
 }
 
 .s1 {
-    background-color: rgb(255, 89, 89);
-    height: 100px;
+    height: 70px;
     display: flex;
-    flex-direction: row;
     align-items: center;
 }
 
 .s2 {
-    background-color: rgb(68, 255, 68);
     height: 300px;
 }
 
 .s3 {
-    background-color: rgb(87, 213, 255);
     height: 100px;
 }
 
-.s1-1 {
-    background-color: #636363;
-    height: 56px;
-    width: 56px;
-    border-radius: 100%;
+.s1 h1 {
+    font-size: 14px;
+    color: #262626;
+    margin-bottom: 3px;
 }
 
-.s1-2 {
-    background-color: #DBDBDB;
-
+.s1 h2 {
     font-size: 14px;
+    color: #8E8E8E;
+}
+
+.s3 p {
+    color: #C7C7C7;
+    font-weight: 400;
+    font-size: 11px;
+    margin-bottom: 20px;
+}
+
+.s1-1 {
+    display: flex;
 }
 
 .s2-1 {
-    background-color: rgb(255, 59, 255);
     height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .s2-2 {
-    background-color: orange;
-    height: 90%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.s1-2 p {
-    color: #636363;
+.s1-1 img {
+    height: 56px;
+    width: 56px;
 }
 
-.s2-2-1 {
-    background-color: #636363;
+.s2-1 h1 {
+    color: #8E8E8E;
+    font-weight: 500;
+    font-size: 12px;
 }
 
+.s2-1 h2 {
+    font-weight: 500;
+    font-size: 12px;
+    color: #262626;
+}
+
+.s2-2 img {
+    height: 32px;
+    width: 32px;
+    border-radius: 100%;
+}
+
+.s2-2 h1 {
+    font-weight: 500;
+    font-size: 14px;
+    color: #262626;
+    margin-bottom: 3px;
+}
+
+.s2-2 h2 {
+    font-weight: 400;
+    font-size: 12px;
+    color: #8E8E8E;
+}
+
+.s2-2 h3 {
+    font-weight: 500;
+    font-size: 12px;
+    color: #139EF2;
+}
+
+.s2-2-1,
 .s2-2-2 {
-    background-color: #DBDBDB;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 935px) {
+    .sidecontent {
+        display: none;
+    }
+
+    .maincontent {
+        margin: auto;
+    }
+
+    main {
+        width: 100vw;
+    }
+
+    .header {
+        padding: 0px 10px;
+        width: 100vw;
+    }
+}
+
+@media (max-width: 614px) {
+    body {
+        width: 100vw;
+    }
+
+    main {
+        margin: 48px auto;
+    }
+
+    footer {
+        display: flex;
+    }
+
+    .mobignore {
+        display: none;
+    }
+
+    .logo img {
+        position: absolute;
+        margin: auto;
+        top: 7px;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 110px;
+        height: 30px;
+    }
+
+    .stories {
+        border: none;
+        background-color: transparent;
+        margin-bottom: 5px;
+    }
+
 }
