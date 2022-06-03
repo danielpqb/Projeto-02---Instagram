@@ -46,6 +46,13 @@ main {
 
 footer {
     display: none;
+    height: 50px;
+    background-color: #FFFFFF;
+    border: 1px solid #DBDBDB;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
 }
 
 /* Header */
@@ -150,6 +157,7 @@ footer {
     overflow: hidden;
     text-overflow: ellipsis;
 
+    margin-top: 5px;
     text-align: center;
     font-weight: 400;
     font-size: 12px;
@@ -267,7 +275,7 @@ footer {
     display: flex;
     flex-direction: column;
     width: 293px;
-    margin: 0 15px;
+    margin: 0 5px;
     padding: 5px;
 }
 
@@ -419,10 +427,21 @@ footer {
         height: 30px;
     }
 
+    .hbtns ion-icon {
+        margin: 0px;
+    }
+
     .stories {
         border: none;
         background-color: transparent;
         margin-bottom: 5px;
+    }
+
+    .fbtns {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px;
+        width: 100%;
     }
 
 }
