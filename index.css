@@ -2,6 +2,12 @@
 
 * {
     box-sizing: border-box;
+    color: #262626;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 img {
@@ -111,19 +117,37 @@ footer {
     position: relative;
 }
 
-.rollbtn img {
+.rollbtn {
     position: absolute;
     margin: auto;
     top: 0;
     bottom: 0;
     right: 10px;
-    background-color: rgba(0, 0, 0, 0.3);
-    height: 30px;
-    width: 30px;
-    box-sizing: content-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rollbtn ion-icon {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.icon1 ion-icon {
+    color: rgb(255, 255, 255);
+    font-size: 38px;
+}
+
+.icon2 ion-icon {
+    right: 3px;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
     border-radius: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 2px 2px 5px rgba(105, 105, 105, 0.5);
+    border: 1px solid rgba(200, 200, 200, 0.9);
 }
 
 .stories {
@@ -136,10 +160,12 @@ footer {
     justify-content: flex-start;
     overflow: hidden;
     margin-bottom: 40px;
+    padding-left: 10px;
 }
 
 .story {
     min-width: 77px;
+    margin: 0px 1px;
 }
 
 .img1 {
@@ -175,7 +201,6 @@ footer {
     border: 2px solid white;
     border-radius: 100%;
 }
-
 
 /* Content */
 .content {
@@ -237,7 +262,6 @@ footer {
     flex-direction: column;
     justify-content: center;
 }
-
 
 .c2-2 {
     margin: 5px;
@@ -443,5 +467,4 @@ footer {
         margin: 10px;
         width: 100%;
     }
-
 }
